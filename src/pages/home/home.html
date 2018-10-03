@@ -5,13 +5,11 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <h2>Plugins de cordova</h2>
+  <h3>Camara</h3>
+  <button ion-button full (click)="tomarFoto()" color="secondary">Tomar foto</button>
+  <img [src]="imagen" *ngIf="imagen">
+  <h3>GPS</h3>
+  <button ion-button full (click)="obtenerPosicion()" color="danger">Posición</button>
+  <p *ngIf="posicion">Tu posición es: Longitud {{posicion.coords.longitude}} - Latitud {{posicion.coords.latitude}}</p>
 </ion-content>
